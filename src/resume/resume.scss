@@ -2,6 +2,7 @@ div.content {
     --divider-color: black;
     --divider-size: calc(.125rem / 4);
     --divider-padding: calc(.125rem / 2);
+    --divider-border: var(--divider-size) solid var(--divider-color);
     --article-padding: 1rem;
 
     display: flex;
@@ -10,46 +11,25 @@ div.content {
 
     > :not(div) {
         text-align: center;
-
-        margin-left: calc(2 * var(--article-padding));
-        margin-right: calc(2 * var(--article-padding));
+        margin: var(--article-padding);
     }
 
     > div {
         display: flex;
-        
-        &.top {
-            margin: var(--article-padding);
-            margin-bottom: 0px;
-        }
+        margin: var(--article-padding);
         
         &.divider {
             background-color: var(--divider-color);
-            border: var(--divider-size) solid var(--divider-color);
-            margin-left: var(--article-padding);
-            margin-right: var(--article-padding);
-        }
-
-        &.bottom {
+            border: var(--divider-border);
             margin: var(--article-padding);
-            margin-top: 0px;
         }
 
         div {
             display: flex;
-
-            &.left {
-                margin: var(--article-padding);
-            }
+            margin: var(--article-padding);
 
             &.divider {
-                border: var(--divider-size) solid var(--divider-color);
-                margin-left: var(--article-padding);
-                margin-right: var(--article-padding);
-            }
-        
-            &.right {
-                margin: var(--article-padding);
+                border: var(--divider-border);
             }
         }
     }
