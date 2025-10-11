@@ -1,0 +1,37 @@
+div.content {
+    display: flex;
+    flex-direction: column;
+
+    > div {
+        display: flex;
+        
+        &.top {
+            margin-bottom: auto;
+
+        }
+        
+        &.divider {
+            height: 1px;
+            background-color: black;
+        }
+
+        &.bottom {
+            margin-top: auto;
+        }
+
+        div {
+            &.left {
+                margin-right: auto;
+            }
+
+            &.divider {
+                width: 1px;
+                background-color: black;
+            }
+        
+            &.right {
+                margin-left: auto;
+            }
+        }
+    }
+}
