@@ -1,36 +1,55 @@
 div.content {
+    --divider-color: black;
+    --divider-size: calc(.125rem / 4);
+    --divider-padding: calc(.125rem / 2);
+    --article-padding: 1rem;
+
     display: flex;
     flex-direction: column;
+
+
+    > :not(div) {
+        text-align: center;
+
+        margin-left: calc(2 * var(--article-padding));
+        margin-right: calc(2 * var(--article-padding));
+    }
 
     > div {
         display: flex;
         
         &.top {
-            margin-bottom: auto;
-
+            margin: var(--article-padding);
+            margin-bottom: 0px;
         }
         
         &.divider {
-            height: 1px;
-            background-color: black;
+            background-color: var(--divider-color);
+            border: var(--divider-size) solid var(--divider-color);
+            margin-left: var(--article-padding);
+            margin-right: var(--article-padding);
         }
 
         &.bottom {
-            margin-top: auto;
+            margin: var(--article-padding);
+            margin-top: 0px;
         }
 
         div {
+            display: flex;
+
             &.left {
-                margin-right: auto;
+                margin: var(--article-padding);
             }
 
             &.divider {
-                width: 1px;
-                background-color: black;
+                border: var(--divider-size) solid var(--divider-color);
+                margin-left: var(--article-padding);
+                margin-right: var(--article-padding);
             }
         
             &.right {
-                margin-left: auto;
+                margin: var(--article-padding);
             }
         }
     }
