@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'resume',
   imports: [RouterOutlet],
   templateUrl: './resume.html',
-  styleUrl: './resume.scss'
+  styleUrl: './resume.scss',
 })
 export class Resume {
   protected readonly loremIpsumText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec egestas ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec non ornare elit, at ornare nibh. Donec pulvinar eros mi. Donec sit amet lacus arcu. Proin et dui eros. Cras et odio dignissim, maximus dui vitae, scelerisque nunc. Fusce viverra nulla eget placerat finibus. Integer at efficitur quam. Pellentesque lobortis ipsum elit, convallis scelerisque nisl pretium sit amet. Nunc egestas ornare libero, et consequat nisl suscipit sodales. Fusce cursus mollis nisi, eget rhoncus mauris luctus ac.

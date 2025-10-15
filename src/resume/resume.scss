@@ -1,36 +1,44 @@
 div.content {
-    --divider-color: black;
-    --divider-size: calc(.125rem / 4);
-    --divider-padding: calc(.125rem / 2);
-    --divider-border: var(--divider-size) solid var(--divider-color);
-    --article-padding: 1rem;
+  --divider-color: black;
+  --divider-size: calc(0.125rem / 4);
+  --divider-padding: calc(0.125rem / 2);
+  --divider-border: var(--divider-size) solid var(--divider-color);
+  --article-padding: 1rem;
+  --single-column-padding: 8rem;
 
+  display: flex;
+  flex-direction: column;
+
+  > :not(div),
+  div.education {
+    margin-left: var(--single-column-padding);
+    margin-right: var(--single-column-padding);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+  }
 
+  > div {
+    display: flex;
+    margin: var(--article-padding);
 
-    > :not(div) {
-        text-align: center;
-        margin: var(--article-padding);
+    &.education {
+      span:not(:first-child) {
+        margin-left: auto;
+      }
     }
 
-    > div {
-        display: flex;
-        margin: var(--article-padding);
-        
-        &.divider {
-            background-color: var(--divider-color);
-            border: var(--divider-border);
-            margin: var(--article-padding);
-        }
-
-        div {
-            display: flex;
-            margin: var(--article-padding);
-
-            &.divider {
-                border: var(--divider-border);
-            }
-        }
+    &.divider {
+      background-color: var(--divider-color);
+      border: var(--divider-border);
     }
+
+    div {
+      display: flex;
+      margin: var(--article-padding);
+
+      &.divider {
+        border: var(--divider-border);
+      }
+    }
+  }
 }
