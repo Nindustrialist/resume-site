@@ -9,17 +9,15 @@ div.content {
   display: flex;
   flex-direction: column;
 
-  > :not(div),
-  div.education {
+  > * {
     margin-left: var(--single-column-padding);
     margin-right: var(--single-column-padding);
-    display: flex;
-    justify-content: center;
   }
 
   > div {
     display: flex;
-    margin: var(--article-padding);
+    margin-top: var(--article-padding);
+    margin-bottom: var(--article-padding);
 
     &.education {
       span:not(:first-child) {
@@ -34,6 +32,7 @@ div.content {
 
     div {
       display: flex;
+      margin: var(--article-padding);
       margin: var(--article-padding);
 
       &.divider {
