@@ -1,0 +1,17 @@
+%two-column-layout {
+  display: flex;
+
+  > *:not(:first-child) {
+    margin-left: auto;
+  }
+}
+
+div.employer-info {
+  @extend %two-column-layout;
+}
+
+div.position-info {
+  @extend %two-column-layout;
+
+  text-decoration: underline;
+}

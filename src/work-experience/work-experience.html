@@ -1,0 +1,13 @@
+<div class="employer-info">
+  <h3>{{ workExperience().employerName }}</h3>
+  <span>{{ workExperience().employerLocation }}</span>
+</div>
+<div class="position-info">
+  <span>{{ workExperience().jobTitle }}</span>
+  <span>{{ workExperience().datesEmployed }}</span>
+</div>
+<ul>
+  @for (description of workExperience().descriptions; track $index) {
+    <li>{{ description }}</li>
+  }
+</ul>

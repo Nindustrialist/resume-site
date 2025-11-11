@@ -1,42 +1,50 @@
-div.content {
-  --divider-color: black;
-  --divider-size: calc(0.125rem / 4);
-  --divider-padding: calc(0.125rem / 2);
-  --divider-border: var(--divider-size) solid var(--divider-color);
+:host {
   --article-padding: 1rem;
-  --single-column-padding: 8rem;
+  --single-column-padding: 2rem;
 
-  display: flex;
-  flex-direction: column;
-
-  > * {
-    margin-left: var(--single-column-padding);
-    margin-right: var(--single-column-padding);
+  @media print {
+    --single-column-padding: 0px;
   }
 
-  > div {
+  div.content {
     display: flex;
-    margin-top: var(--article-padding);
-    margin-bottom: var(--article-padding);
+    flex-direction: column;
+    gap: var(--article-padding);
 
-    &.education {
-      span:not(:first-child) {
-        margin-left: auto;
+    margin-left: var(--single-column-padding);
+    margin-right: var(--single-column-padding);
+
+    > div {
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+      h2 {
+        margin-bottom: 0.5rem;
       }
-    }
 
-    &.divider {
-      background-color: var(--divider-color);
-      border: var(--divider-border);
-    }
+      &.education {
+        div {
+          display: flex;
 
-    div {
-      display: flex;
-      margin: var(--article-padding);
-      margin: var(--article-padding);
+          span:not(:first-child) {
+            margin-left: auto;
+            text-decoration: underline;
+          }
+        }
+      }
 
-      &.divider {
-        border: var(--divider-border);
+      &.skills {
+        ul {
+          columns: 2;
+        }
+      }
+
+      &.work-experience {
+        div.experiences {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
       }
     }
   }
