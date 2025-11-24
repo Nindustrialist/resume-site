@@ -26,7 +26,11 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["src/styles.scss"],
+            "outputPath": {
+              "base": "dist/resume-site",
+              "browser": ""
+            }
           },
           "configurations": {
             "production": {
@@ -79,6 +83,12 @@
               }
             ],
             "styles": ["src/styles.scss"]
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "buildTarget": "resume-site:build:production"
           }
         }
       }
