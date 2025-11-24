@@ -28,3 +28,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run deploy
+      env:
+        # GITHUB_TOKEN is automatically provided by GitHub Actions
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
