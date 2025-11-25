@@ -33,3 +33,6 @@ jobs:
       env:
         # GITHUB_TOKEN is automatically provided by GitHub Actions
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  contents: write # Allow write permission to GITHUB_TOKEN to commit to deploy branch.
