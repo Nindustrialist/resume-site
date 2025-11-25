@@ -23,10 +23,10 @@ jobs:
     - name: Configure GitHub Pages
       uses: actions/configure-pages@v5
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 22.x
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 22.x
         cache: 'npm'
     - run: npm ci
     - run: npm run deploy
