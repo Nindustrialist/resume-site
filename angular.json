@@ -31,7 +31,7 @@
               "base": "dist/resume-site",
               "browser": ""
             },
-            "baseHref": "resume-site"
+            "baseHref": "/resume-site/"
           },
           "configurations": {
             "production": {
