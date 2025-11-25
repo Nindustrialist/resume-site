@@ -22,16 +22,15 @@ jobs:
         node-version: 22.x
         cache: 'npm'
     - run: npm ci
-    - run: npm build
-    - run: npm run deploy
-      env:
-        # GITHUB_TOKEN is automatically provided by GitHub Actions
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - run: npm run build
     - name: Upload Build Artifacts
       id: deployment
       uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
       with:
         path: dist/resume-site
+      env:
+        # GITHUB_TOKEN is automatically provided by GitHub Actions
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
     environment:
