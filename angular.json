@@ -85,12 +85,6 @@
             ],
             "styles": ["src/styles.scss"]
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "buildTarget": "resume-site:build:production"
-          }
         }
       }
     }
